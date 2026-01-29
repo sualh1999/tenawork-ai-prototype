@@ -205,8 +205,8 @@ def get_filtered_candidate_count(location: str | None, title: str | None, travel
         where_clauses.append("location LIKE ?")
         params.append(f"%{location}%")
     if title:
-        where_clauses.append("experience LIKE ?")
-        params.append(f'%{{"title": "{title}"%') # Simplified search for title in JSON
+        where_clauses.append("LOWER(experience) LIKE ?")
+        params.append(f'%\"title\": \"%{(title or "").lower()}%\"%')
     if travel is not None:
         where_clauses.append("willing_to_travel = ?")
         params.append(travel)
@@ -235,10 +235,8 @@ def get_all_candidates_paginated_and_filtered(
         where_clauses.append("location LIKE ?")
         params.append(f"%{location}%")
     if title:
-        # This is a simplified LIKE search for a title within the experience JSON string.
-        # A more robust solution might use json_each or a dedicated search index.
-        where_clauses.append("experience LIKE ?")
-        params.append(f'%"title": "{title}"%')
+        where_clauses.append("LOWER(experience) LIKE ?")
+        params.append(f'%\"title\": \"%{(title or "").lower()}%\"%')
     if travel is not None:
         where_clauses.append("willing_to_travel = ?")
         params.append(travel)
