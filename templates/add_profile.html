@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Profile - TenaWork AI</title>
+    <!-- Google Fonts & Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .form-section-divider {
+            border-top: 1px solid #dee2e6;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #00796b;
+            border-color: #00796b;
+        }
+        .btn-primary:hover {
+            background-color: #006054;
+            border-color: #006054;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-people-fill"></i>
+                TenaWork AI
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <a href="/" class="nav-link me-3">AI Search</a>
+                <a href="/browse" class="nav-link me-3">Browse Candidates</a>
+                <a href="/add-profile" class="btn btn-primary">
+                    <i class="bi bi-plus-lg"></i> Add Profile
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Form -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-light border-0 py-3">
+                        <h2 class="mb-0 text-center">Create a New Professional Profile</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/add-profile" method="post">
+                            
+                            <!-- Personal Information -->
+                            <h5><i class="bi bi-person-fill me-2"></i>Personal Information</h5>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label for="full_name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="full_name" name="full_name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="location" name="location">
+                                </div>
+                                <div class="col-12">
+                                    <label for="bio" class="form-label">Biography</label>
+                                    <textarea class="form-control" id="bio" name="bio" rows="4" placeholder="A short summary of their skills and passion..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="languages_spoken" class="form-label">Languages Spoken</label>
+                                    <input type="text" class="form-control" id="languages_spoken" name="languages_spoken" placeholder="e.g., Amharic, English, Oromo">
+                                    <div class="form-text">Enter languages separated by commas.</div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="willing_to_travel" name="willing_to_travel">
+                                        <label class="form-check-label" for="willing_to_travel">
+                                            Willing to travel
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="form-section-divider">
+                                <h5><i class="bi bi-book-fill me-2"></i>Education</h5>
+                                <p class="text-muted small">For this demo, only one institution can be added.</p>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12">
+                                        <label for="institution_name" class="form-label">Institution Name</label>
+                                        <input type="text" class="form-control" id="institution_name" name="institution_name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="degree" class="form-label">Degree</label>
+                                        <input type="text" class="form-control" id="degree" name="degree">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="year" class="form-label">Year of Graduation</label>
+                                        <input type="text" class="form-control" id="year" name="year">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Experience -->
+                            <div class="form-section-divider">
+                                <h5><i class="bi bi-briefcase-fill me-2"></i>Work Experience</h5>
+                                <p class="text-muted small">For this demo, only one position can be added.</p>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="company_name" class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" id="company_name" name="company_name">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="title" class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" id="title" name="title">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="start_date" class="form-label">Start Date</label>
+                                        <input type="date" class="form-control" id="start_date" name="start_date">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="end_date" class="form-label">End Date</label>
+                                        <input type="date" class="form-control" id="end_date" name="end_date">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Create Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

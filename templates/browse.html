@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Candidates - TenaWork AI</title>
+    <!-- Google Fonts & Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .candidate-card {
+            border: 1px solid #e9ecef;
+            border-radius: 0.75rem;
+            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+        }
+        .candidate-card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .title-badge {
+            background-color: #e0f2f1;
+            color: #00796b;
+            font-weight: 500;
+        }
+        .btn-primary {
+            background-color: #00796b;
+            border-color: #00796b;
+        }
+        .btn-primary:hover {
+            background-color: #006054;
+            border-color: #006054;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-people-fill"></i>
+                TenaWork AI
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                 <a href="/" class="nav-link me-3">AI Search</a>
+                <a href="/add-profile" class="btn btn-outline-primary">
+                    <i class="bi bi-plus-lg"></i> Add Profile
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Filter Sidebar -->
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-funnel-fill me-2"></i>Filters</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="/browse" method="get">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Job Title</label>
+                                <input type="text" class="form-control" id="title" name="title" value="{{ filters.title or '' }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" name="location" value="{{ filters.location or '' }}">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="travel" name="travel" value="true" {% if filters.travel %}checked{% endif %}>
+                                <label class="form-check-label" for="travel">
+                                    Willing to Travel
+                                </label>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Apply Filters</button>
+                                <a href="/browse" class="btn btn-link text-muted mt-2">Clear Filters</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-baseline mb-3">
+                    <h2 class="mb-0">Browse Candidates</h2>
+                    <small class="text-muted">Showing {{ candidates|length }} of {{ total_count }} results</small>
+                </div>
+                
+                {% if candidates %}
+                    <div class="row gy-4">
+                        {% for candidate in candidates %}
+                        <div class="col-12">
+                            <a href="/candidate/{{ candidate.id }}" class="card candidate-card d-block">
+                                <div class="card-body p-4">
+                                    <div class="d-flex flex-wrap align-items-center mb-2">
+                                        <h5 class="card-title mb-0 me-3">{{ candidate.full_name }}</h5>
+                                        {% if candidate.experience and candidate.experience[0] %}
+                                        <span class="badge rounded-pill title-badge px-2 py-1">{{ candidate.experience[0].title }}</span>
+                                        {% endif %}
+                                    </div>
+                                    {% if candidate.location %}
+                                    <p class="card-subtitle mb-2 text-muted"><i class="bi bi-geo-alt-fill me-1"></i>{{ candidate.location }}</p>
+                                    {% endif %}
+                                    <p class="card-text text-muted">{{ candidate.bio | truncate(200) }}</p>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item {% if page <= 1 %}disabled{% endif %}">
+                                <a class="page-link" href="{{ base_url }}&page={{ page - 1 }}">Previous</a>
+                            </li>
+                            <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
+                                <a class="page-link" href="{{ base_url }}&page={{ page + 1 }}">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                {% else %}
+                    <div class="text-center py-5 border rounded bg-light">
+                        <i class="bi bi-search" style="font-size: 3rem; color: #6c757d;"></i>
+                        <h4 class="mt-3">No Candidates Match Your Filters</h4>
+                        <p class="lead text-muted">Try adjusting or clearing your filters.</p>
+                        <a href="/browse" class="btn btn-primary mt-3">Clear Filters</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

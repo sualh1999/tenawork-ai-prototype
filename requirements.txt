@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+fastembed
+faiss-cpu
+Jinja2
+python-multipart
+numpy
+loguru

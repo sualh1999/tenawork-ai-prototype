@@ -1,0 +1,263 @@
+[
+  {
+    "full_name": "Dr. Alemayehu Zewde",
+    "location": "Addis Ababa",
+    "willing_to_travel": true,
+    "phone": "+251911123456",
+    "email": "alemayehu.z@example.com",
+    "password": "password123",
+    "bio": "A highly experienced cardiologist with over 15 years in clinical practice, specializing in interventional cardiology and complex cardiac imaging. Proven track record in managing complex cardiac cases.",
+    "languages_spoken": ["Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "Addis Ababa University, College of Health Sciences",
+        "degree": "Doctor of Medicine",
+        "year": "2004"
+      },
+      {
+        "institution_name": "University of Cape Town",
+        "degree": "Cardiology Fellowship",
+        "year": "2008"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Tikur Anbessa Specialized Hospital",
+        "title": "Senior Cardiologist",
+        "start_date": "2009-01-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Fatuma Ibrahim",
+    "location": "Addis Ababa",
+    "willing_to_travel": false,
+    "phone": "+251912345678",
+    "email": "fatuma.i@example.com",
+    "password": "password123",
+    "bio": "Compassionate and dedicated pediatric nurse with 8 years of experience in neonatal and pediatric intensive care units (NICU/PICU). Skilled in providing critical care to infants and children.",
+    "languages_spoken": ["Oromo", "Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "St. Paul's Hospital Millennium Medical College",
+        "degree": "Bachelor of Science in Nursing",
+        "year": "2016"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "St. Paul's Hospital Millennium Medical College",
+        "title": "Pediatric Nurse",
+        "start_date": "2016-07-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Yonas Gebremedhin",
+    "location": "Hawassa",
+    "willing_to_travel": true,
+    "phone": "+251913456789",
+    "email": "yonas.g@example.com",
+    "password": "password123",
+    "bio": "A radiologist with expertise in MRI and CT scan interpretation. Focused on providing accurate and timely diagnostic reports to support patient treatment plans.",
+    "languages_spoken": ["Amharic", "Sidamo"],
+    "education": [
+      {
+        "institution_name": "Hawassa University College of Medicine and Health science",
+        "degree": "Doctor of Medicine",
+        "year": "2012"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Myungsung Christian Medical Center (MCM)",
+        "title": "Radiologist",
+        "start_date": "2014-01-01",
+        "end_date": "2020-12-31"
+      },
+      {
+        "company_name": "Hawassa Referral Hospital",
+        "title": "Consultant Radiologist",
+        "start_date": "2021-01-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Dr. Liya Tadesse",
+    "location": "Addis Ababa",
+    "willing_to_travel": true,
+    "phone": "+251914567890",
+    "email": "liya.t@example.com",
+    "password": "password123",
+    "bio": "A recent medical school graduate with a passion for community health and primary care. Eager to apply modern medical knowledge and provide comprehensive care to diverse patient populations.",
+    "languages_spoken": ["Amharic", "English", "Tigrigna"],
+    "education": [
+      {
+        "institution_name": "Zewditu Memorial Hospital",
+        "degree": "Doctor of Medicine",
+        "year": "2022"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Zewditu Memorial Hospital",
+        "title": "General Practitioner (Intern)",
+        "start_date": "2022-09-01",
+        "end_date": "2023-08-31"
+      }
+    ]
+  },
+  {
+    "full_name": "Sara Mitiku",
+    "location": "Bahir Dar",
+    "willing_to_travel": false,
+    "phone": "+251915678901",
+    "email": "sara.m@example.com",
+    "password": "password123",
+    "bio": "Detail-oriented surgical nurse with 12 years of experience assisting in major surgeries, including orthopedic and cardiovascular procedures. Expert in pre-operative and post-operative patient care.",
+    "languages_spoken": ["Amharic"],
+    "education": [
+      {
+        "institution_name": "Bahir Dar University",
+        "degree": "Bachelor of Science in Nursing",
+        "year": "2012"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Felege Hiwot Referral Hospital",
+        "title": "Surgical Nurse",
+        "start_date": "2012-10-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Dawit Assefa",
+    "location": "Addis Ababa",
+    "willing_to_travel": false,
+    "phone": "+251916789012",
+    "email": "dawit.a@example.com",
+    "password": "password123",
+    "bio": "Licensed pharmacist with a strong background in medication therapy management and patient counseling. Committed to ensuring safe and effective medication use in a hospital setting.",
+    "languages_spoken": ["Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "Addis Ababa University",
+        "degree": "Bachelor of Pharmacy",
+        "year": "2014"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Black Lion Hospital",
+        "title": "Clinical Pharmacist",
+        "start_date": "2015-01-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Dr. Fekerte Abera",
+    "location": "Mekelle",
+    "willing_to_travel": true,
+    "phone": "+251917890123",
+    "email": "fekerte.a@example.com",
+    "password": "password123",
+    "bio": "Board-certified pediatrician focused on child development and preventative care. Strong interpersonal skills for communicating with children and parents in a busy clinic.",
+    "languages_spoken": ["Tigrigna", "Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "Mekelle University",
+        "degree": "Doctor of Medicine",
+        "year": "2013"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Ayder Comprehensive Specialized Hospital",
+        "title": "Pediatrician",
+        "start_date": "2015-01-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Abebe Kassahun",
+    "location": "Adama",
+    "willing_to_travel": true,
+    "phone": "+251918901234",
+    "email": "abebe.k@example.com",
+    "password": "password123",
+    "bio": "A physical therapist specializing in sports injuries and post-surgical rehabilitation. Dedicated to helping athletes regain mobility and improve their quality of life.",
+    "languages_spoken": ["Oromo", "Amharic"],
+    "education": [
+      {
+        "institution_name": "Adama Hospital Medical College",
+        "degree": "B.Sc. in Physiotherapy",
+        "year": "2017"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "Adama General Hospital and Medical College",
+        "title": "Physical Therapist",
+        "start_date": "2017-09-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Hana Girma",
+    "location": "Addis Ababa",
+    "willing_to_travel": false,
+    "phone": "+251920123456",
+    "email": "hana.g@example.com",
+    "password": "password123",
+    "bio": "A pediatric nurse with 5 years of experience in a school setting, managing daily health needs, immunizations, and health education for children aged 5-12.",
+    "languages_spoken": ["Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "Addis Ababa University",
+        "degree": "Bachelor of Science in Nursing",
+        "year": "2019"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "International Community School of Addis Ababa",
+        "title": "School Nurse",
+        "start_date": "2019-08-01",
+        "end_date": "Present"
+      }
+    ]
+  },
+  {
+    "full_name": "Bekele Mekonnen",
+    "location": "Gondar",
+    "willing_to_travel": false,
+    "phone": "+251921234567",
+    "email": "bekele.m@example.com",
+    "password": "password123",
+    "bio": "Oncology pharmacist with deep knowledge of chemotherapy agents and supportive care medications. Works closely with oncologists to manage patient treatment plans.",
+    "languages_spoken": ["Amharic", "English"],
+    "education": [
+      {
+        "institution_name": "University of Gondar",
+        "degree": "Bachelor of Pharmacy",
+        "year": "2015"
+      }
+    ],
+    "experience": [
+      {
+        "company_name": "University of Gondar Comprehensive Specialized Hospital",
+        "title": "Oncology Pharmacist",
+        "start_date": "2016-01-01",
+        "end_date": "Present"
+      }
+    ]
+  }
+]
